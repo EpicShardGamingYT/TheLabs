@@ -66,6 +66,7 @@ def create_user(user):
 async def on_message(message):
     global flag #Need to find a way to not have to make this global
     global challenge #ditto
+    if message.guild == None: return
     if message.channel.id == 439434153629319168:
         if message.content.upper() == "!ACCEPT":
             member = message.author
